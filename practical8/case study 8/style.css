@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e8f0eb;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+/* Main Card */
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 650px;
+
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Left Side */
+
+.welcome {
+    background: #19352d;
+    color: white;
+    padding: 55px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 55px;
+}
+
+.logo span {
+    color: #a9e34b;
+}
+
+.welcome h1 {
+    font-size: 43px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    color: #cbd8d3;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.features div {
+    font-size: 14px;
+    color: #e6eee9;
+}
+
+/* Form */
+
+.form-section {
+    padding: 45px 55px;
+}
+
+.form-section h2 {
+    font-size: 30px;
+    color: #19352d;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+/* Form Groups */
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #34443e;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1.5px solid #d9dfdc;
+    border-radius: 10px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #8fcb39;
+    box-shadow: 0 0 0 3px rgba(169, 227, 75, 0.15);
+}
+
+/* Radio */
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Terms */
+
+.terms {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.terms label {
+    font-size: 12px;
+    color: #666;
+}
+
+#terms {
+    margin-top: 3px;
+}
+
+/* Error Message */
+
+small {
+    display: block;
+    color: #e05252;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+/* Valid / Invalid */
+
+.valid {
+    border-color: #76b82a !important;
+}
+
+.invalid {
+    border-color: #e05252 !important;
+}
+
+/* Button */
+
+button {
+    width: 100%;
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: #a9e34b;
+    color: #19352d;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #8fcb39;
+    transform: translateY(-2px);
+}
+
+/* Success Message */
+
+#successMessage {
+    text-align: center;
+    margin-top: 15px;
+    color: #4d8b20;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome {
+        padding: 35px;
+    }
+
+    .logo {
+        margin-bottom: 25px;
+    }
+
+    .welcome h1 {
+        font-size: 35px;
+    }
+
+    .form-section {
+        padding: 35px;
+    }
+}
