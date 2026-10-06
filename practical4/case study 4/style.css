@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: 'DM Sans', sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            #f8dce8 0%,
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 85% 15%,
+            #dcd5f5 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 90%,
+            #d4eee8 0%,
+            transparent 28%
+        ),
+
+        #f8f5f1;
+
+    color: #393442;
+
+    overflow: hidden;
+}
+
+
+/* -------------------------
+   Decorative Shapes
+------------------------- */
+
+.shape {
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(1px);
+
+    opacity: 0.55;
+
+    z-index: 0;
+}
+
+
+.shape1 {
+    width: 180px;
+    height: 180px;
+
+    background: #eadcf5;
+
+    top: -70px;
+    left: -50px;
+}
+
+
+.shape2 {
+    width: 230px;
+    height: 230px;
+
+    background: #f6d8df;
+
+    bottom: -100px;
+    right: -70px;
+}
+
+
+.shape3 {
+    width: 100px;
+    height: 100px;
+
+    background: #cfe9e2;
+
+    top: 25%;
+    right: 10%;
+}
+
+
+/* -------------------------
+   Main Page
+------------------------- */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* -------------------------
+   Card
+------------------------- */
+
+.card {
+    width: 460px;
+
+    padding: 35px 45px;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    backdrop-filter: none;
+}
+
+
+/* -------------------------
+   Icon
+------------------------- */
+
+.icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #e9e1f5;
+
+    color: #75629b;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 8px 18px rgba(117, 98, 155, 0.12);
+}
+
+
+/* -------------------------
+   Small Heading
+------------------------- */
+
+.tag {
+    color: #9b8bac;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+/* -------------------------
+   Main Heading
+------------------------- */
+
+h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 43px;
+
+    line-height: 1.05;
+
+    color: #393442;
+
+    margin-bottom: 16px;
+}
+
+
+h1 span {
+    color: #806da4;
+}
+
+
+/* -------------------------
+   Description
+------------------------- */
+
+.description {
+    color: #77717d;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    max-width: 350px;
+}
+
+
+/* -------------------------
+   Divider
+------------------------- */
+
+.divider {
+    height: 1px;
+
+    background: #e9e3e7;
+
+    margin: 27px 0;
+}
+
+
+/* -------------------------
+   Label
+------------------------- */
+
+label {
+    display: block;
+
+    color: #504957;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 9px;
+}
+
+
+/* -------------------------
+   Input
+------------------------- */
+
+.input-box {
+    display: flex;
+
+    align-items: center;
+
+    background: #f6f2f7;
+
+    border: 1.5px solid #e5dfea;
+
+    border-radius: 14px;
+
+    padding: 0 15px;
+
+    transition: 0.3s;
+}
+
+
+.input-box span {
+    color: #a092ad;
+
+    font-weight: 600;
+
+    margin-right: 10px;
+}
+
+
+.input-box:focus-within {
+    border-color: #9b89bd;
+
+    background: #fbf9fc;
+
+    box-shadow:
+        0 0 0 4px rgba(155, 137, 189, 0.1);
+}
+
+
+input {
+    width: 100%;
+
+    padding: 15px 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #403947;
+
+    font-size: 15px;
+
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+input::placeholder {
+    color: #b3adb6;
+}
+
+
+/* -------------------------
+   Button
+------------------------- */
+
+button {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 15px 18px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #806da4;
+
+    color: white;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 8px 18px rgba(128, 109, 164, 0.22);
+}
+
+
+button span {
+    font-size: 19px;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    background: #6f5c93;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(128, 109, 164, 0.28);
+}
+
+
+button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* -------------------------
+   Result Box
+------------------------- */
+
+.result {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 16px;
+
+    background: #f2eef7;
+
+    border: 1px solid #e5ddef;
+
+    transition: 0.3s;
+}
+
+
+.result-icon {
+    min-width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #ded4ed;
+
+    color: #76629a;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.result h3 {
+    font-size: 13px;
+
+    color: #51495b;
+
+    margin-bottom: 3px;
+}
+
+
+.result p {
+    font-size: 12px;
+
+    color: #8b838f;
+}
+
+
+/* -------------------------
+   Example
+------------------------- */
+
+.example {
+    margin-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 11px;
+
+    color: #9a929d;
+}
+
+
+.example span {
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    background: #f5e4e8;
+
+    color: #a87887;
+
+    font-weight: 700;
+}
+
+
+.example strong {
+    color: #6d6370;
+}
+
+
+.example small {
+    color: #a39aa4;
+}
+
+
+/* -------------------------
+   Footer
+------------------------- */
+
+footer {
+    margin-top: 20px;
+
+    color: #aaa2ac;
+
+    font-size: 11px;
+
+    letter-spacing: 0.5px;
+}
+
+
+footer span {
+    color: #9b86b9;
+
+    margin-left: 3px;
+}
+
+
+/* -------------------------
+   Responsive
+------------------------- */
+
+@media (max-width: 520px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .card {
+        width: calc(100% - 30px);
+
+        padding: 32px 25px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+}

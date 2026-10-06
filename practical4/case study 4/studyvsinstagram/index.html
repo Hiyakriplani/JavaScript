@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study vs Instagram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Study <span>vs</span> Instagram</h1>
+        <p class="subtitle">Where did your time go today?</p>
+
+        <div class="cards">
+
+            <div class="card study">
+                <div class="emoji">📚</div>
+                <h2>Study Time</h2>
+
+                <input type="number" id="study" placeholder="Minutes" min="0">
+                <small>Enter total study time</small>
+            </div>
+
+            <div class="card insta">
+                <div class="emoji">📱</div>
+                <h2>Instagram Time</h2>
+
+                <input type="number" id="instagram" placeholder="Minutes" min="0">
+                <small>Enter total scrolling time</small>
+            </div>
+
+        </div>
+
+        <div class="limit">
+            <label>Daily Instagram Limit</label>
+
+            <input
+                type="number"
+                id="limit"
+                value="60"
+                min="1"
+            >
+
+            <span>minutes</span>
+        </div>
+
+        <button onclick="compareTime()">
+            Compare My Time →
+        </button>
+
+        <div id="result" class="result">
+            <b>Ready?</b>
+            <p>Enter your time to see the result.</p>
+        </div>
+
+        <button class="instagram-btn" onclick="openInstagram()">
+            Open Instagram ↗
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

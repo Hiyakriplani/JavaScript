@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Palindrome Checker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Decorative background shapes -->
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+
+    <main class="page">
+
+        <section class="card">
+
+            <h1>
+            Palindrome<br>
+            <span>Checker</span>
+            </h1>
+
+            <p class="description">
+                Reverse a number and discover whether it reads
+                the same backwards as forwards.
+            </p>
+
+            <div class="divider"></div>
+
+            <!-- Input -->
+            <label for="number">Enter your number</label>
+
+            <div class="input-box">
+                <span>#</span>
+
+                <input
+                    type="number"
+                    id="number"
+                    placeholder="e.g. 121"
+                >
+            </div>
+
+            <!-- Button -->
+            <button onclick="checkPalindrome()">
+                Check Number
+                <span>→</span>
+            </button>
+
+            <!-- Result -->
+            <div id="result" class="result">
+
+                <div class="result-icon">
+                    ?
+                </div>
+
+                <div>
+                    <h3>Ready to check</h3>
+
+                    <p>
+                        Enter a number above to begin.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Example -->
+            <div class="example">
+
+                <span>Example</span>
+
+                <strong>121 → 121</strong>
+
+                <small>Palindrome</small>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
