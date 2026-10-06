@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Analyzer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="small-heading">
+            JAVASCRIPT CASE STUDY
+        </div>
+
+        <h1>Array Analyzer</h1>
+
+        <p class="subtitle">
+            Find the maximum and minimum values in an array
+        </p>
+
+        <div class="array-box">
+
+            <div class="box-title">
+                Enter Array
+            </div>
+
+            <input
+                type="text"
+                id="arrayInput"
+                placeholder="12,45,2,89,34"
+            >
+
+        </div>
+
+        <button onclick="analyzeArray()">
+            Analyze Array
+        </button>
+
+        <div class="result-container">
+
+            <div class="result-box">
+
+                <div class="result-title">
+                    Maximum
+                </div>
+
+                <div class="result-value" id="maximum">
+                    -
+                </div>
+
+                <div class="result-description">
+                    Highest value
+                </div>
+
+            </div>
+
+            <div class="result-box">
+
+                <div class="result-title">
+                    Minimum
+                </div>
+
+                <div class="result-value" id="minimum">
+                    -
+                </div>
+
+                <div class="result-description">
+                    Lowest value
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
