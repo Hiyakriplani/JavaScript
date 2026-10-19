@@ -1,0 +1,275 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #edf4f6;
+    color: #203344;
+    padding: 30px 16px;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.tag {
+    color: #168b91;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #71838f;
+}
+
+.clock-card,
+.countdown-card,
+.form-card,
+.schedule-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px #2033440d;
+}
+
+.clock-card {
+    text-align: center;
+    background: #dceef0;
+}
+
+.clock-card p {
+    color: #38777d;
+    font-size: 14px;
+}
+
+#clock {
+    font-size: 42px;
+    color: #174e60;
+    margin: 10px 0;
+}
+
+.countdown-card {
+    text-align: center;
+    background: #173b50;
+    color: #ffffff;
+}
+
+.countdown-card .tag {
+    color: #72d4cf;
+}
+
+.countdown-card > p {
+    font-size: 14px;
+}
+
+#nextClass {
+    font-size: 25px;
+    margin: 8px 0;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 24px 0;
+}
+
+.countdown div {
+    background: #28566a;
+    border-radius: 12px;
+    padding: 15px;
+    min-width: 85px;
+}
+
+.countdown span {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    color: #8ce3dc;
+}
+
+.countdown small {
+    font-size: 11px;
+    color: #e0eeee;
+}
+
+#reminderStatus {
+    color: #b9e9e6;
+}
+
+h2 {
+    margin-bottom: 16px;
+}
+
+form {
+    display: grid;
+    gap: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d4e3e7;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    background: #fbfdfe;
+    color: #203344;
+}
+
+input:focus {
+    border-color: #168b91;
+}
+
+label {
+    font-size: 13px;
+    color: #71838f;
+}
+
+button {
+    background: #168b91;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #107177;
+}
+
+.hint {
+    font-size: 12px;
+    color: #71838f;
+    margin-top: 12px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+#classCount {
+    background: #dceef0;
+    color: #176d74;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.schedule-list {
+    margin-top: 18px;
+}
+
+.class-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #e1ebee;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.class-item h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.class-item p {
+    color: #71838f;
+    font-size: 12px;
+}
+
+.class-time {
+    color: #168b91;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.class-item button {
+    padding: 8px 10px;
+    background: #f8e8e5;
+    color: #ad5147;
+    font-size: 12px;
+}
+
+.class-item button:hover {
+    background: #f2d5d0;
+}
+
+.empty {
+    text-align: center;
+    padding: 25px;
+    color: #8a9aa3;
+}
+
+footer {
+    text-align: center;
+    color: #71838f;
+    font-size: 12px;
+    padding: 10px;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .clock-card,
+    .countdown-card,
+    .form-card,
+    .schedule-card {
+        padding: 18px;
+    }
+
+    #clock {
+        font-size: 34px;
+    }
+
+    .countdown {
+        gap: 7px;
+    }
+
+    .countdown div {
+        min-width: 0;
+        flex: 1;
+        padding: 12px 5px;
+    }
+
+    .countdown span {
+        font-size: 23px;
+    }
+
+    .class-item {
+        flex-wrap: wrap;
+    }
+}

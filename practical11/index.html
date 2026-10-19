@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📚 Class Scheduler</h1>
+            <p>Manage your classes easily</p>
+            <h2 id="clock">--:--:--</h2>
+            <p id="todayDate"></p>
+        </header>
+
+        <section class="countdown-section">
+            <h2>Next Class</h2>
+            <h3 id="nextSubject">No upcoming classes</h3>
+            <p id="nextClass">Add a class to begin</p>
+
+            <div class="countdown">
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <p>Hours</p>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+            <p id="reminderStatus">Reminders are ready.</p>
+        </section>
+
+        <section class="form-section">
+            <h2>Add a Class</h2>
+
+            <form id="classForm">
+                <label for="className">Subject Name</label>
+                <input type="text" id="className"
+                       placeholder="e.g. Computer Networks" required>
+
+                <label for="classRoom">Room Number</label>
+                <input type="text" id="classRoom"
+                       placeholder="e.g. Room 204" required>
+
+                <label for="classTime">Class Time</label>
+                <input type="time" id="classTime" required>
+
+                <button type="submit">＋ Add Class</button>
+            </form>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <section class="schedule-section">
+            <h2>Today's Schedule (<span id="classCount">0</span>)</h2>
+            <div id="scheduleList">
+                <p>No classes added yet.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

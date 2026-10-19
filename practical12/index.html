@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizUp | Create & Play</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="logo" id="homeBtn">Quiz<span>Up.</span></a>
+    <nav>
+      <button class="nav-btn" id="createNav">Create Quiz</button>
+      <button class="nav-btn" id="playNav">Take Quiz</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">LEARN · CREATE · CHALLENGE</p>
+      <h1>Your quiz.<br><span>Your rules.</span></h1>
+      <p>Create a quiz on any topic or challenge yourself with a ready-made quiz.</p>
+      <div class="hero-actions">
+        <button class="primary-btn" id="heroCreate">＋ Create a Quiz</button>
+        <button class="secondary-btn" id="heroPlay">Take a Quiz →</button>
+      </div>
+    </section>
+
+    <section id="homeScreen" class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR WORKSPACE</p>
+          <h2>Ready when you are</h2>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span>Quizzes created</span>
+          <strong id="createdCount">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Quizzes completed</span>
+          <strong id="completedCount">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Best score</span>
+          <strong id="homeBest">—</strong>
+        </div>
+      </div>
+
+      <div class="home-grid">
+        <article class="action-card">
+          <div class="card-icon">✎</div>
+          <h3>Build your own quiz</h3>
+          <p>Write questions, add options, set answers, and customize your quiz.</p>
+          <button class="primary-btn full" id="createCardBtn">Start creating</button>
+        </article>
+
+        <article class="action-card">
+          <div class="card-icon">⚡</div>
+          <h3>Play a sample quiz</h3>
+          <p>Test your knowledge with a general knowledge quiz included in the app.</p>
+          <button class="secondary-btn full" id="sampleBtn">Play sample quiz</button>
+        </article>
+      </div>
+
+      <div class="saved-heading">
+        <h3>Your saved quizzes</h3>
+        <span id="savedLabel">Saved in this browser</span>
+      </div>
+      <div id="savedQuizzes" class="saved-list"></div>
+    </section>
+
+    <section id="editorScreen" class="panel hidden">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">QUIZ BUILDER</p>
+          <h2>Create your quiz</h2>
+          <p class="muted">Add questions and select the correct answer for each one.</p>
+        </div>
+        <button class="text-btn" id="backHome">← Home</button>
+      </div>
+
+      <form id="quizForm">
+        <div class="form-grid">
+          <label class="field">
+            Quiz title
+            <input id="quizTitle" required maxlength="80"
+              placeholder="e.g. JavaScript Basics">
+          </label>
+          <label class="field">
+            Category
+            <input id="quizCategory" maxlength="40"
+              placeholder="e.g. Programming">
+          </label>
+          <label class="field">
+            Time per question
+            <select id="quizTime">
+              <option value="0">No timer</option>
+              <option value="10">10 seconds</option>
+              <option value="15" selected>15 seconds</option>
+              <option value="30">30 seconds</option>
+              <option value="60">60 seconds</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="questionEditor"></div>
+
+        <div class="editor-actions">
+          <button type="button" class="secondary-btn" id="addQuestion">
+            ＋ Add question
+          </button>
+          <span id="questionCountLabel">0 questions</span>
+        </div>
+
+        <div class="form-footer">
+          <button type="button" class="text-btn" id="cancelEditor">Cancel</button>
+          <button type="submit" class="primary-btn">Save & Preview Quiz →</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="playScreen" class="panel hidden">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow" id="playCategory">YOUR QUIZ</p>
+          <h2 id="playTitle">Quiz title</h2>
+        </div>
+        <button class="text-btn" id="exitQuiz">✕ Exit</button>
+      </div>
+
+      <div class="quiz-meta">
+        <span id="progressText">Question 1 of 5</span>
+        <span id="timerText">⏱ 15s</span>
+      </div>
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+
+      <div class="question-area">
+        <span class="question-tag" id="questionTag">QUESTION 01</span>
+        <h3 id="questionText"></h3>
+        <div id="playOptions" class="options-grid"></div>
+        <p id="answerFeedback" class="feedback" aria-live="polite"></p>
+      </div>
+
+      <div class="quiz-footer">
+        <span id="liveScore">Score: 0</span>
+        <button id="nextQuestion" class="primary-btn" disabled>Next question →</button>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="panel hidden">
+      <div class="result-content">
+        <div class="result-icon" id="resultIcon">🏆</div>
+        <p class="eyebrow">QUIZ COMPLETED</p>
+        <h2 id="resultTitle">Well done!</h2>
+        <p id="resultMessage" class="muted"></p>
+        <div class="result-score">
+          <strong id="resultScore">0/0</strong>
+          <span id="resultPercent">0% score</span>
+        </div>
+        <div id="answerReview" class="review-list"></div>
+        <div class="hero-actions centered">
+          <button class="primary-btn" id="playAgain">Play again</button>
+          <button class="secondary-btn" id="resultHome">Back to home</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Made for curious minds · QuizUp</footer>
+</body>
+</html>
