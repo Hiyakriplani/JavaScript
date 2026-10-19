@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record Management System</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <p class="tag">STUDENT MANAGEMENT PORTAL</p>
+            <h1>Student Records 🎓</h1>
+            <p class="subtitle">
+                Manage, search and explore student information.
+            </p>
+        </header>
+
+        <section class="welcome">
+            <div>
+                <h2>Student Directory</h2>
+                <p>Load and view student records using JSON.</p>
+            </div>
+            <div class="total-box">
+                <span id="totalStudents">0</span>
+                <small>Students shown</small>
+            </div>
+        </section>
+
+        <section class="controls">
+            <h3>Load Student Data</h3>
+            <p>Choose a method to retrieve the JSON records.</p>
+
+            <div class="buttons">
+                <button id="fetchBtn">Load using fetch()</button>
+                <button id="jqueryBtn">Load using $.getJSON()</button>
+            </div>
+
+            <p id="status" role="status">Ready to load student records.</p>
+        </section>
+
+        <section class="filters">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by name, roll number or email..."
+                aria-label="Search students"
+            >
+
+            <select id="departmentFilter" aria-label="Filter by department">
+                <option value="all">All Departments</option>
+            </select>
+
+            <select id="sortBy" aria-label="Sort students">
+                <option value="name">Sort by Name</option>
+                <option value="roll">Sort by Roll Number</option>
+                <option value="marks">Sort by Marks</option>
+            </select>
+        </section>
+
+        <section class="table-card">
+            <div class="table-heading">
+                <div>
+                    <h3>Student Directory</h3>
+                    <p>Student details loaded dynamically from JSON</p>
+                </div>
+                <span id="recordCount">0 records</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Roll No.</th>
+                            <th>Student Name</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Year</th>
+                            <th>Marks</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable">
+                        <tr>
+                            <td colspan="6" class="empty">
+                                Click a load button to display student records.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            Built with HTML, CSS, JavaScript, JSON and jQuery 💜
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
